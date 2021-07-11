@@ -51,10 +51,9 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hello {},My Name is IGRIS
-𝐈 𝐀𝐌 𝐀 𝐑𝐎𝐘𝐀𝐋 𝐊𝐍𝐈𝐆𝐇𝐓 𝐅𝐑𝐎𝐌 𝐒𝐎𝐋𝐎 𝐋𝐄𝐕𝐄𝐋𝐈𝐍𝐆.
-I will help you manage your group.
-TO KNOW MY COMMANDS CLICK /help.
+Hey there! My name is Aleena - I'm here to help you manage your groups! Hit /help to find out more about how to use me to my full potential.
+
+Join my [news channel](https://t.me/minibotz) to get information on all the latest updates.
 """
 
 HELP_STRINGS = """
@@ -77,10 +76,9 @@ And the following:
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-SAITAMA_IMG = "https://telegra.ph/file/3d6b5ac78befd0bffac47.mp4"
+SAITAMA_IMG = ""
 
-DONATE_STRING = """donate to the original writer of the Base code, Paul
-There are two ways of supporting him; [PayPal](paypal.me/PaulSonOfLars), or [Monzo](monzo.me/paulnionvestergaardlarsen)."""
+DONATE_STRING = """[creator](https://t.me/Zeus_Of_TelegramX)"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -178,17 +176,17 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(                   
                           [[
                               InlineKeyboardButton(
-                              text="🔥Add IGRIS To Your Group🔥",
+                              text="Add me to your chat",
                               url="t.me/{}?startgroup=true".format(
                                   context.bot.username))
                           ], 
                           [
                               InlineKeyboardButton(
-                              text="🍁Support Group🍁",
-                              url=f"https://t.me/IGRISBOTSUPPORT"),
+                              text="",
+                              url=f"https://t.me/minibotz"),
                               InlineKeyboardButton(
-                              text="✨Updates Channel✨",
-                              url="https://t.me/IGRISROBOT_SUPPORT")
+                              text="",
+                              url="https://t.me/minibotz")
                           ]])) 
     else:
         update.effective_message.reply_text(
